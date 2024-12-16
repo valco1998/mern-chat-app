@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
 
-const connectDB = () => {
-  mongoose
-    .connect('mongodb://127.0.0.1:27017/Chat-App')
-    .then(() => console.log('Connected to ChatDB database'))
-    .catch((error) => console.error('Error connecting to ChatDB database:', error));
+const connectDB = async () => {
+	try {
+		await mongoose.connect(process.env.MONGO_DB_URI);
+		console.log("Connected to MongoDB");
+	} catch (error) {
+		console.log("Error connecting to MongoDB", error.message);
+	}
 };
 
 export default connectDB;

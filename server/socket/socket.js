@@ -7,7 +7,10 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {
-		origin: ["http://localhost:3000"],
+		origin: [
+			"https://mern-chat-prod-xvyu.onrender.com",  // הכתובת של השרת שלך בסביבת הפיתוח
+			"http://localhost:3000",  // הכתובת המקומית אם אתה מריץ את הלקוח ב-`localhost`
+		],
 		methods: ["GET", "POST"],
 	},
 });

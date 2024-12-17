@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chat-app-yt": "file:..",
     "daisyui": "^4.12.10",
     "esbuild": "^0.23.1",
     "io": "^1.5.3",
@@ -20,6 +21,7 @@
     "react-router-dom": "^6.26.2",
     "socket": "^0.14.30",
     "socket.io-client": "^4.8.1",
+    "whats-proj": "file:..",
     "zustand": "^5.0.1"
   },
   "devDependencies": {
